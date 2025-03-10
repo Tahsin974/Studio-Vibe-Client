@@ -1,0 +1,134 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.service-dropdown {
+  display: none;
+}
+.service-dropdown > ul > li {
+  animation: dropdown-slide-up 1.5s ease-in-out forwards;
+}
+
+.service:hover .service-dropdown {
+  display: block;
+  animation: dropdown 1s ease-in-out;
+}
+
+.text-animation {
+  animation: slide-up 3s ease-in-out infinite;
+}
+
+.animation {
+  animation: slide-down 1s ease-in-out;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+#service-box-1 {
+  grid-column: 1 / span 3;
+}
+#service-box-2 {
+  position: absolute;
+  left: 0;
+  bottom: -240px;
+}
+#service-box-3 {
+  position: absolute;
+  right: 0;
+  bottom: -128px;
+}
+
+.service-box-container {
+  min-width: 630px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  position: relative;
+  align-items: start;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes dropdown-slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes dropdown {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1255px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 1254px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 100px;
+  }
+  #service-box-2 {
+    position: absolute;
+    left: 0;
+    bottom: -220px;
+  }
+}
+@media only screen and (max-width: 698px) {
+  .service-box-container {
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #service-box-1 {
+    max-width: 18rem;
+  }
+  #service-box-2 {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    max-width: 18rem;
+  }
+  #service-box-3 {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    max-width: 18rem;
+  }
+}
