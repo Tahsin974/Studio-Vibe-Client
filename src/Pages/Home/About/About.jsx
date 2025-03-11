@@ -5,10 +5,13 @@ import { IoMdMicrophone } from "react-icons/io";
 
 const About = () => {
   return (
-    <div className="hero pb-40 pt-28 bg-[#000000] text-white min-h-screen ">
+    <div
+      id="about"
+      className="hero pb-40 pt-28 bg-[#000000] text-white min-h-screen "
+    >
       <div className="hero-content about-content  max-w-7xl  ">
         <div>
-          <h1 className=" bg-gradient-to-r from-cyan-300 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold">
+          <h1 className=" bg-gradient-to-r from-cyan-300 via-violet-400 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold">
             STUDIOVIBE ✦ <br />
             YOUR SOUND, AMPLIFIED
           </h1>

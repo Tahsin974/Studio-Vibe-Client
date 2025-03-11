@@ -5,6 +5,7 @@ import { MdElectricBolt } from "react-icons/md";
 
 const HomeBanner = () => {
   const [index, setIndex] = useState(0);
+
   const texts = [
     // Same substring at the start will only be typed out once, initially
     "SOUND",
@@ -19,7 +20,7 @@ const HomeBanner = () => {
   useEffect(() => {
     const interval = setTimeout(() => {
       setIndex((prev) => (prev + 1) % texts.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(interval);
   }, [index]);
@@ -34,7 +35,7 @@ const HomeBanner = () => {
           muted
           className="w-full object-cover min-h-screen"
         ></video>
-        <div className="hero-overlay bg-black/60"></div>
+        <div className="hero-overlay bg-neutral-700/5"></div>
         <div className="hero-content text-neutral-content text-center z-10 p-0">
           <div className="lg:space-y-7 space-y-3">
             <h1 className="lg:text-6xl text-4xl font-bold flex justify-center">
@@ -57,7 +58,7 @@ const HomeBanner = () => {
         style={{ display: "flex" }}
         options={{
           height: 50,
-          amplitude: 30,
+          amplitude: 40,
           speed: 0.25,
           points: 4,
         }}

@@ -1,9 +1,9 @@
 const WhyChooseUs = () => {
   return (
-    <div className="hero bg-[#111623] text-white min-h-screen py-28">
+    <div className="hero bg-[#111623] text-white min-h-screen py-16">
       <div className="hero-content grid lg:grid-cols-2 gap-5 justify-items-center p-0">
         <div className="space-y-5">
-          <h1 className=" bg-gradient-to-r from-cyan-300 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold text-center">
+          <h1 className=" bg-gradient-to-r from-cyan-300 via-violet-400 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold text-center">
             WHY CHOOSE US?
           </h1>
           <p className="py-6 lg:text-lg text-md leading-7 font-serif text-center">

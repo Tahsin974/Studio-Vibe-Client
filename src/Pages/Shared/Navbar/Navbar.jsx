@@ -1,31 +1,55 @@
+import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router";
 
 const Navbar = ({ children }) => {
+  const [activeLink, setActiveLink] = useState("home");
+  const handleLinkChange = (linkName) => {
+    setActiveLink(linkName);
+  };
   const navOptions = (
     <>
       <li>
-        <Link className="duration-200 hover:bg-white hover:text-black rounded-2xl p-2">
+        <Link
+          className={`duration-200 hover:bg-white hover:text-black rounded-2xl p-2 ${
+            activeLink === "home" && "bg-white text-black"
+          } `}
+          onClick={() => handleLinkChange("home")}
+        >
           Home
         </Link>
       </li>
       <li>
-        <Link className="duration-200 hover:bg-white hover:text-black rounded-2xl p-2 service">
+        <Link
+          onClick={() => handleLinkChange("services")}
+          className={`duration-200 hover:bg-white hover:text-black rounded-2xl p-2 service ${
+            activeLink === "services" && "bg-white text-black"
+          }`}
+        >
           Services
           <div className="service-dropdown bg-transparent cursor-auto absolute top-0  left-0 ">
             <ul className=" flex-col  mt-12  rounded-lg  bg-black/75 py-10 px-3 w-56 text-white">
               <li>
-                <Link className="font-light hover:text-green-300">
+                <Link
+                  onClick={() => handleLinkChange("services")}
+                  className="font-light hover:text-green-300"
+                >
                   Music Production
                 </Link>
               </li>
               <li>
-                <Link className="font-light hover:text-green-300">
+                <Link
+                  onClick={() => handleLinkChange("services")}
+                  className="font-light hover:text-green-300"
+                >
                   Mixing & Mastering
                 </Link>
               </li>
               <li>
-                <Link className="font-light hover:text-green-300">
+                <Link
+                  onClick={() => handleLinkChange("services")}
+                  className="font-light hover:text-green-300"
+                >
                   Sound Design
                 </Link>
               </li>
@@ -34,17 +58,32 @@ const Navbar = ({ children }) => {
         </Link>
       </li>
       <li>
-        <Link className="duration-200 hover:bg-white hover:text-black rounded-2xl p-2">
+        <Link
+          onClick={() => handleLinkChange("artists")}
+          className={`duration-200 hover:bg-white hover:text-black rounded-2xl p-2 ${
+            activeLink === "artists" && "bg-white text-black"
+          }`}
+        >
           Artist Directory
         </Link>
       </li>
       <li>
-        <Link className="duration-200 hover:bg-white hover:text-black rounded-2xl p-2">
+        <Link
+          onClick={() => handleLinkChange("contact")}
+          className={`duration-200 hover:bg-white hover:text-black rounded-2xl p-2 ${
+            activeLink === "contact" && "bg-white text-black"
+          }`}
+        >
           Contact
         </Link>
       </li>
       <li>
-        <Link className=" duration-200 hover:bg-white hover:text-black rounded-2xl p-2">
+        <Link
+          onClick={() => handleLinkChange("about")}
+          className={` duration-200 hover:bg-white hover:text-black rounded-2xl p-2 ${
+            activeLink === "about" && "bg-white text-black"
+          }`}
+        >
           About
         </Link>
       </li>

@@ -1,0 +1,63 @@
+[
+  {
+    "icon": "🎧",
+    "title": "Professional Mixing",
+    "description": "Our experienced mixing engineers will blend your tracks to perfection, creating a balanced and polished sound that translates across all playback systems."
+  },
+  {
+    "icon": "🔊",
+    "title": "Mastering for All Formats",
+    "description": "Get your music mastered for streaming, CD, vinyl, and more. We'll optimize your audio to ensure it sounds its best on every platform.",
+    "exclusive": true
+  },
+  {
+    "icon": "🎚️",
+    "title": "Stem Mastering",
+    "description": "Have more control over the final sound with stem mastering. We'll master individual stems, allowing for detailed adjustments and a more nuanced result."
+  },
+  {
+    "icon": "🎼",
+    "title": "Audio Restoration",
+    "description": "We can restore and enhance the quality of your old recordings, removing noise and improving clarity."
+  },
+  {
+    "icon": "🎤",
+    "title": "Vocal Tuning",
+    "description": "Get pitch-perfect vocals with our expert vocal tuning services. We'll subtly correct any imperfections while maintaining a natural sound."
+  },
+  {
+    "icon": "🎧",
+    "title": "Headphone Mastering",
+    "description": "Optimize your mixes for headphone listening, ensuring a clear and immersive experience for listeners on the go."
+  },
+  {
+    "icon": "🚀",
+    "title": "Express Mastering",
+    "description": "Need your tracks mastered quickly? Our express mastering service provides high-quality results with a fast turnaround time."
+  },
+  {
+    "icon": "🎚️",
+    "title": "Analog Mastering",
+    "description": "Add warmth and character to your music with our analog mastering option. We'll use classic analog gear to give your tracks a unique sonic signature."
+  },
+  {
+    "icon": "👂",
+    "title": "Audio QC",
+    "description": "Ensure your audio meets industry standards with our quality control check. We'll identify and address any technical issues before your release."
+  },
+  {
+    "icon": "🎤",
+    "title": "Podcast Mastering",
+    "description": "Get your podcasts sounding professional with our dedicated podcast mastering service. We'll optimize levels, clarity, and loudness for optimal listening."
+  },
+  {
+    "icon": "🥁",
+    "title": "Drum Mixing",
+    "description": "Make your drums punch through the mix with our specialized drum mixing services. We'll focus on impact, clarity, and groove."
+  },
+  {
+    "icon": "🎸",
+    "title": "Guitar Tone Enhancement",
+    "description": "We'll help you achieve the perfect guitar tone, whether you're looking for a clean and crisp sound or a heavy and distorted wall of sound."
+  }
+]
