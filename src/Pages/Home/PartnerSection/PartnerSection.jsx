@@ -1,9 +1,9 @@
 import partnerImg from "../../../assets/Preferred-Partner-Studio-Vibe.webp";
 const PartnerSection = () => {
   return (
-    <div className="hero bg-[#111623] text-white min-h-screen my-32 rounded-3xl shadow-xl shadow-sky-800">
+    <div className="hero bg-[#111623] text-white min-h-screen my-32 rounded-3xl shadow-xl shadow-sky-800 py-20">
       <div className="hero-content gap-14 flex-col lg:flex-row items-center">
-        <img src={partnerImg} className="max-w-lg rounded-lg shadow-2xl" />
+        <img src={partnerImg} className="lg:max-w-lg rounded-lg shadow-2xl" />
         <div className="space-y-4">
           <div className="p-3 bg-gradient-to-r from-amber-100  to-violet-200 rounded-4xl w-32">
             <p className="text-center text-black font-semibold">Studio Vibe</p>
