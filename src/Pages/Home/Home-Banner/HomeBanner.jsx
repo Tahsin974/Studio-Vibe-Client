@@ -33,9 +33,9 @@ const HomeBanner = () => {
           autoPlay
           loop
           muted
-          className="w-full object-cover min-h-screen"
+          className="w-full object-cover lg:min-h-screen min-h-[460px]"
         ></video>
-        <div className="hero-overlay bg-neutral-700/5"></div>
+        <div className="hero-overlay bg-neutral-900/10"></div>
         <div className="hero-content text-neutral-content text-center z-10 p-0">
           <div className="lg:space-y-7 space-y-3">
             <h1 className="lg:text-6xl text-4xl font-bold flex justify-center">

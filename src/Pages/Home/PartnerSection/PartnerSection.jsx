@@ -4,8 +4,8 @@ const PartnerSection = () => {
     <div className="hero bg-[#111623] text-white min-h-screen my-32 rounded-3xl shadow-xl shadow-sky-800 py-20">
       <div className="hero-content gap-14 flex-col lg:flex-row items-center">
         <img src={partnerImg} className="lg:max-w-lg rounded-lg shadow-2xl" />
-        <div className="space-y-4">
-          <div className="p-3 bg-gradient-to-r from-amber-100  to-violet-200 rounded-4xl w-32">
+        <div className="space-y-4 lg:text-left text-center">
+          <div className="p-3 bg-gradient-to-r from-amber-100  to-violet-200 rounded-4xl w-32 mx-auto lg:mx-0">
             <p className="text-center text-black font-semibold">Studio Vibe</p>
           </div>
           <h1 className="bg-gradient-to-r from-cyan-300 via-violet-400 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold my-7 uppercase">

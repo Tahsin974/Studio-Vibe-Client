@@ -7,15 +7,15 @@ const About = () => {
   return (
     <div
       id="about"
-      className="hero pb-40 pt-28 bg-[#000000] text-white min-h-screen "
+      className="hero lg:pb-40 pb-6 lg:pt-28 pt-4 bg-[#000000] text-white min-h-screen "
     >
       <div className="hero-content about-content  max-w-7xl  ">
-        <div>
-          <h1 className=" bg-gradient-to-r from-cyan-300 via-violet-400 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold">
+        <div className="lg:text-left text-center">
+          <h1 className=" bg-gradient-to-r from-cyan-300 via-violet-400 to-violet-700 bg-clip-text text-transparent lg:text-5xl text-3xl font-bold text-center">
             STUDIOVIBE ✦ <br />
             YOUR SOUND, AMPLIFIED
           </h1>
-          <p className="py-6 lg:text-md text-sm leading-7 font-serif">
+          <p className="py-6 lg:text-md text-sm leading-7 font-serif ">
             Welcome to StudioVibe, where sound meets innovation. We amplify the
             sound of artists, musicians, and music businesses through sonic
             branding, immersive audio experiences, and innovative digital
@@ -26,7 +26,7 @@ const About = () => {
             step of the creative process. Partner with StudioVibe to unleash
             your music's power and resonate with audiences worldwide
           </p>
-          <button className=" btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-outline rounded-4xl border-[#ff4b2b] text-white bg-gradient-to-r from-[#ff4b2b] via-[#ff416c] to-[#ff4b2b] apply-btn shadow-[#ff4b2b]">
+          <button className=" btn btn-md lg:btn-lg xl:btn-xl btn-outline rounded-4xl border-[#ff4b2b] text-white bg-gradient-to-r from-[#ff4b2b] via-[#ff416c] to-[#ff4b2b] apply-btn shadow-[#ff4b2b]">
             Apply Now
           </button>
         </div>
