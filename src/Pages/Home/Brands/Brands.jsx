@@ -1,10 +1,10 @@
 import Marquee from "react-fast-marquee";
-import img1 from "../../../assets/TikTok.png";
-import img2 from "../../../assets/gaana.png";
-import img3 from "../../../assets/Vevo.png";
-import img4 from "../../../assets/youTube.png";
-import img5 from "../../../assets/amazon-music.png";
-import img6 from "../../../assets/Hungama.png";
+import img1 from "../../../assets/Brands/TikTok.png";
+import img2 from "../../../assets/Brands/gaana.png";
+import img3 from "../../../assets/Brands/Vevo.png";
+import img4 from "../../../assets/Brands/youTube.png";
+import img5 from "../../../assets/Brands/amazon-music.png";
+import img6 from "../../../assets/Brands/Hungama.png";
 const Brands = () => {
   return (
     <div className="bg-[#000000] py-24 ">
