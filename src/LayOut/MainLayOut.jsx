@@ -1,14 +1,22 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 import Footer from "../Pages/Shared/Footer/Footer";
 
 const MainLayOut = () => {
+  const location = useLocation();
+  const isLogin = location.pathname === "/login";
+  console.log(isLogin);
   return (
     <div className="relative">
-      <Navbar>
+      {isLogin ? (
         <Outlet />
-      </Navbar>
-      <Footer />
+      ) : (
+        <Navbar>
+          <Outlet />
+        </Navbar>
+      )}
+
+      {!isLogin && <Footer />}
     </div>
   );
 };

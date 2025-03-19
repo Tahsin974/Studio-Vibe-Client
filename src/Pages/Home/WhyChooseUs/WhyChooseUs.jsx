@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
         </div>
         <div>
           <iframe
-            className="rounded-3xl lg:w-[560px] md:w-[560px] lg:h-[315px] md:h-[315px] sm:w-[415px] sm:h-[300px] w-auto h-[215px]"
+            className="rounded-3xl lg:w-[560px] md:w-[560px] lg:h-[315px] md:h-[315px] sm:w-[415px] sm:h-[300px] w-auto h-[215px] cursor-pointer"
             src="https://www.youtube.com/embed/fezKpDFKf5U?controls=0&autoplay=1&loop=1&playlist=fezKpDFKf5U&mute=1&modestbranding=1&rel=0"
             title="YouTube video player"
             frameborder="0"

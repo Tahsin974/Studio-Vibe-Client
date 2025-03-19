@@ -1,3 +1,4 @@
+import Title from "../../../Components/Title/Title";
 import About from "../About/About";
 import Brands from "../Brands/Brands";
 import ContactUs from "../ContactUs/ContactUs";
@@ -12,6 +13,7 @@ import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 const Home = () => {
   return (
     <div>
+      <Title>Home</Title>
       <HomeBanner />
       <About />
       <Brands />

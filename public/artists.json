@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Lena Petrov",
+    "profession": "Russian Ballet Dancer",
+    "nationality": "Russian",
+    "image": "https://i.ibb.co.com/bjXnzHq9/Lena-Petrov.jpg"
+  },
+  {
+    "name": "Hiro Nakamura",
+    "profession": "Japanese Manga Artist",
+    "nationality": "Japanese",
+    "image": "https://i.ibb.co.com/G3MvN8vg/Hiro-Nakamura.jpg"
+  },
+  {
+    "name": "Giulia Esposito",
+    "profession": "Italian Sculptor",
+    "nationality": "Italian",
+    "image": "https://i.ibb.co.com/ZpWkLHW4/Giulia-Esposito.jpg"
+  },
+  {
+    "name": "Youssef Khalil",
+    "profession": "Egyptian Calligrapher",
+    "nationality": "Egyptian",
+    "image": "https://i.ibb.co.com/7xfdJsyL/Youssef-Khalil.jpg"
+  },
+  {
+    "name": "Camille Laurent",
+    "profession": "French Fashion Designer",
+    "nationality": "French",
+    "image": "https://i.ibb.co.com/xtfN5FZS/Camille-Laurent.jpg"
+  },
+  {
+    "name": "Wei Zhang",
+    "profession": "Chinese Opera Singer",
+    "nationality": "Chinese",
+    "image": "https://i.ibb.co.com/0jb6hwcd/Wei-Zhang.png"
+  },
+  {
+    "name": "Elena Dimitrova",
+    "profession": "Bulgarian Textile Artist",
+    "nationality": "Bulgarian",
+    "image": "https://i.ibb.co.com/gCfCdnP/Elena-Dimitrova.jpg"
+  },
+  {
+    "name": "Javier Garcia",
+    "profession": "Mexican Street Artist",
+    "nationality": "Mexican",
+    "image": "https://i.ibb.co.com/84jpYX4M/Javier-Garcia.jpg"
+  }
+]

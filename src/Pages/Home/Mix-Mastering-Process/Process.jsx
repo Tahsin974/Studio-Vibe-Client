@@ -8,7 +8,7 @@ import { FaSliders } from "react-icons/fa6";
 
 const Process = () => {
   return (
-    <div className="hero bg-[#000000]  text-white  lg:py-20 md:py-20 py-12 my-32">
+    <div className="hero bg-[#000000]  text-white  lg:py-6 md:py-20 py-12 my-32">
       <div className="hero-content text-center text-black">
         <div className=" grid lg:grid-cols-4 md:grid-cols-2  gap-6">
           <div className="card process-card transition  duration-300 ease-in-out hover:-translate-y-4 hover:scale-110 card-animation bg-[#000000] text-white max-w-96 shadow-sm ">

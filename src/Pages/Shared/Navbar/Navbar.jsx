@@ -1,10 +1,17 @@
 import { useRef, useState } from "react";
+import { CgMenuGridR } from "react-icons/cg";
 import { FaFingerprint } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router";
+import logo from "../../../assets/Logo/Studio_Vibe_Logo2.png";
+import useAuthContext from "../../../Context/useAuthContext";
+import { useEffect } from "react";
 
 const Navbar = ({ children }) => {
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState(
+    localStorage.getItem("activeLink") || "home"
+  );
+  const { user } = useAuthContext();
   const handleLinkChange = (linkName) => {
     setActiveLink(linkName);
   };
@@ -18,6 +25,7 @@ const Navbar = ({ children }) => {
     <>
       <li>
         <Link
+          to="/home"
           className={`duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 ${
             activeLink === "home" && "bg-white text-black"
           } `}
@@ -66,6 +74,7 @@ const Navbar = ({ children }) => {
       </li>
       <li>
         <Link
+          to="/artist-directory"
           onClick={() => handleLinkChange("artists")}
           className={`duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 ${
             activeLink === "artists" && "bg-white text-black"
@@ -96,6 +105,9 @@ const Navbar = ({ children }) => {
       </li>
     </>
   );
+  useEffect(() => {
+    localStorage.setItem("activeLink", activeLink);
+  }, [activeLink]);
   return (
     <div className="drawer">
       <input
@@ -106,19 +118,27 @@ const Navbar = ({ children }) => {
       />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="navbar bg-transparent absolute z-20 text-white my-8 items-center justify-center ">
-          <div className="navbar-start">
+        <div className="navbar lg:px-28 md:px-10  fixed top-0 bg-transparent lg:absolute z-20 text-white my-8 items-center justify-center ">
+          <div className="navbar-start lg:mx-0 ms-auto">
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="my-drawer-3"
                 aria-label="open sidebar"
-                className="btn btn-square btn-ghost"
+                className="btn btn-square btn-ghost active:bg-transparent active:border-transparent"
               >
-                <GiHamburgerMenu size={25} />
+                <CgMenuGridR className="text-red-600" size={30} />
               </label>
             </div>
-            <Link className="btn btn-ghost hover:bg-transparent hover:border-transparent hover:shadow-none lg:text-3xl md:text-3xl text-xl">
-              Studio Vibe
+            <Link
+              to="/home"
+              className="btn btn-ghost hover:bg-transparent hover:border-transparent hover:shadow-none lg:text-3xl md:text-3xl text-xl lg:mx-0 mx-auto"
+              onClick={() => handleLinkChange("home")}
+            >
+              <img
+                src={logo}
+                alt="brand logo"
+                className="lg:w-28 lg:h-28 md:h-28 md:w-28 sm:w-20 sm:h-20 h-16 w-16"
+              />
             </Link>
           </div>
           <div className="navbar-center animation hidden lg:flex">
@@ -127,50 +147,59 @@ const Navbar = ({ children }) => {
             </ul>
           </div>
           <div className="navbar-end">
-            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gradient-to-r from-[#3337E0]  to-[#BE224D] text-white rounded-3xl">
-              <FaFingerprint />
-              Client Login
-            </button>
+            {user?.email ? (
+              <details className="dropdown dropdown-end">
+                <summary className=" m-1 btn btn-ghost btn-circle avatar sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
+                  <div className=" rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
+                  </div>
+                </summary>
+                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 lg:w-60 md:w-60 p-2 shadow-sm text-black">
+                  <li>
+                    <a className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>Settings</a>
+                  </li>
+                  <li>
+                    <a>Logout</a>
+                  </li>
+                </ul>
+              </details>
+            ) : (
+              <Link to="/login">
+                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gradient-to-r from-[#FF6FD8]  to-[#3813C2] text-white rounded-3xl border-none shadow-none">
+                  <FaFingerprint />
+                  Client Login
+                </button>
+              </Link>
+            )}
           </div>
         </div>
-        {/* <div className="navbar bg-transparent absolute z-20 text-white my-8 items-center">
-          <div className="flex-none lg:hidden">
-            <label
-              htmlFor="my-drawer-3"
-              aria-label="open sidebar"
-              className="btn btn-square btn-ghost"
-            >
-              <GiHamburgerMenu size={25} />
-            </label>
-          </div>
-          <div>
-            <h1 className="navbar-start text-2xl font-bold">Studio Vibe</h1>
-          </div>
-          <div className="navbar-center hidden  lg:flex animation">
-            <ul className="menu menu-horizontal text-xl font-bold space-x-3">
-              {navOptions}
-            </ul>
-          </div>
-          <div className="navbar-end">
-            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-              Responsive
-            </button>
-          </div>
-        </div> */}
+
         {/* Page content here */}
         {children}
       </div>
-      <div className="drawer-side z-20">
+      <div className="drawer-side z-20 ">
         <label
           htmlFor="my-drawer-3"
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
 
-        <ul className="menu bg-base-200 min-h-full w-80 p-4">
+        <ul className="menu bg-neutral-900 text-white min-h-full w-80 p-5">
           <div className="ms-auto my-5">
-            <button onClick={closeDrawer} className="btn btn-circle">
-              X
+            <button
+              onClick={closeDrawer}
+              className="btn btn-circle bg-transparent border-transparent text-white shadow-none"
+            >
+              <IoMdClose size={30} />
             </button>
           </div>
           {navOptions}
@@ -181,3 +210,35 @@ const Navbar = ({ children }) => {
 };
 
 export default Navbar;
+
+/* <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                >
+                  <li>
+                    <a className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>Settings</a>
+                  </li>
+                  <li>
+                    <a>Logout</a>
+                  </li>
+                </ul>
+              </div> */

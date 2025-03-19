@@ -2,8 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import TestimonialCard from "./TestimonialCard";
+import { useQuery } from "@tanstack/react-query";
 
 const Testimonials = () => {
+  // const { data: testimonials = [] } = useQuery({
+  //   queryKey: ["testimonials"],
+  //   queryFn: async () => {
+  //     const res = await axios.get("");
+  //     return res.data;
+  //   },
+  // });
   const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
     axios.get("testimonials.json").then((res) => setTestimonials(res.data));

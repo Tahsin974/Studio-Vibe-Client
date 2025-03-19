@@ -1,8 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import { useQuery } from "@tanstack/react-query";
 
 const Services = () => {
+  // const { data: services = [] } = useQuery({
+  //   queryKey: ["services"],
+  //   queryFn: async () => {
+  //     const res = await axios.get("");
+  //     return res.data;
+  //   },
+  // });
   const [services, setServices] = useState([]);
   useEffect(() => {
     axios.get("service.json").then((res) => setServices(res.data));
