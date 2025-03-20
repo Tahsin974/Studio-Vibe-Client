@@ -4,13 +4,16 @@ import "./index.css";
 import { BrowserRouter } from "react-router";
 import ReactRoutes from "./ReactRoutes/ReactRoutes";
 import AuthProvider from "./Provider/AuthProvider/AuthProvider";
+import ActiveLinkProvider from "./Provider/ActiveLinkProvider/ActiveLinkProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <ReactRoutes />
-      </AuthProvider>
+      <ActiveLinkProvider>
+        <AuthProvider>
+          <ReactRoutes />
+        </AuthProvider>
+      </ActiveLinkProvider>
     </BrowserRouter>
   </StrictMode>
 );

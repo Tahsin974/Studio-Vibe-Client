@@ -1,20 +1,18 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { CgMenuGridR } from "react-icons/cg";
 import { FaFingerprint } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import logo from "../../../assets/Logo/Studio_Vibe_Logo2.png";
 import useAuthContext from "../../../Context/useAuthContext";
-import { useEffect } from "react";
+import useActiveLinkContext from "../../../Context/useActiveLinkContext";
 
 const Navbar = ({ children }) => {
-  const [activeLink, setActiveLink] = useState(
-    localStorage.getItem("activeLink") || "home"
-  );
-  const { user } = useAuthContext();
-  const handleLinkChange = (linkName) => {
-    setActiveLink(linkName);
-  };
+  const { user, userLogOut, setUser } = useAuthContext();
+  // using Active Link Context
+  const { activeLink, handleLinkChange } = useActiveLinkContext();
+
+  const navigate = useNavigate();
   const drawerRef = useRef(null);
   const closeDrawer = () => {
     if (drawerRef.current) {
@@ -105,9 +103,16 @@ const Navbar = ({ children }) => {
       </li>
     </>
   );
-  useEffect(() => {
-    localStorage.setItem("activeLink", activeLink);
-  }, [activeLink]);
+
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    userLogOut().then(() => {
+      setUser(null);
+      navigate("/home");
+    });
+  };
+
+  // console.log(user);
   return (
     <div className="drawer">
       <input
@@ -150,10 +155,12 @@ const Navbar = ({ children }) => {
             {user?.email ? (
               <details className="dropdown dropdown-end">
                 <summary className=" m-1 btn btn-ghost btn-circle avatar sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-                  <div className=" rounded-full">
+                  <div className=" rounded-full ring-primary ring-offset-base-100  ring ring-offset-2">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      src={
+                        "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      }
                     />
                   </div>
                 </summary>
@@ -168,7 +175,7 @@ const Navbar = ({ children }) => {
                     <a>Settings</a>
                   </li>
                   <li>
-                    <a>Logout</a>
+                    <a onClick={handleLogOut}>Logout</a>
                   </li>
                 </ul>
               </details>
