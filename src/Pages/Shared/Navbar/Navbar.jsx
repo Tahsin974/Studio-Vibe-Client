@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router";
 import logo from "../../../assets/Logo/Studio_Vibe_Logo2.png";
 import useAuthContext from "../../../Context/useAuthContext";
 import useActiveLinkContext from "../../../Context/useActiveLinkContext";
+import "./Navbar.css";
 
 const Navbar = ({ children }) => {
   const { user, userLogOut, setUser } = useAuthContext();
@@ -24,19 +25,19 @@ const Navbar = ({ children }) => {
       <li>
         <Link
           to="/home"
-          className={`duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 ${
-            activeLink === "home" && "bg-white text-black"
+          className={`duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 ${
+            (activeLink === "/home" && "bg-white text-black") ||
+            (activeLink === "/" && "bg-white text-black")
           } `}
-          onClick={() => handleLinkChange("home")}
         >
           Home
         </Link>
       </li>
       <li>
         <Link
-          onClick={() => handleLinkChange("services")}
-          className={`duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 service ${
-            activeLink === "services" && "bg-white text-black"
+          to="/services"
+          className={`duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 service ${
+            activeLink === "/services" && "bg-white text-black"
           }`}
         >
           Services
@@ -44,7 +45,7 @@ const Navbar = ({ children }) => {
             <ul className=" flex-col  mt-12  rounded-lg  bg-black/75 py-10 px-3 w-56 text-white">
               <li>
                 <Link
-                  onClick={() => handleLinkChange("services")}
+                  onClick={() => handleLinkChange("/services")}
                   className="font-light hover:text-green-300"
                 >
                   Music Production
@@ -52,7 +53,7 @@ const Navbar = ({ children }) => {
               </li>
               <li>
                 <Link
-                  onClick={() => handleLinkChange("services")}
+                  onClick={() => handleLinkChange("/services")}
                   className="font-light hover:text-green-300"
                 >
                   Mixing & Mastering
@@ -60,7 +61,7 @@ const Navbar = ({ children }) => {
               </li>
               <li>
                 <Link
-                  onClick={() => handleLinkChange("services")}
+                  onClick={() => handleLinkChange("/services")}
                   className="font-light hover:text-green-300"
                 >
                   Sound Design
@@ -73,9 +74,8 @@ const Navbar = ({ children }) => {
       <li>
         <Link
           to="/artist-directory"
-          onClick={() => handleLinkChange("artists")}
-          className={`duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 ${
-            activeLink === "artists" && "bg-white text-black"
+          className={`duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 ${
+            activeLink === "/artist-directory" && "bg-white text-black"
           }`}
         >
           Artist Directory
@@ -83,9 +83,9 @@ const Navbar = ({ children }) => {
       </li>
       <li>
         <Link
-          onClick={() => handleLinkChange("contact")}
-          className={`duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 ${
-            activeLink === "contact" && "bg-white text-black"
+          to="/contact-us"
+          className={`duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 ${
+            activeLink === "/contact-us" && "bg-white text-black"
           }`}
         >
           Contact
@@ -93,9 +93,9 @@ const Navbar = ({ children }) => {
       </li>
       <li>
         <Link
-          onClick={() => handleLinkChange("about")}
-          className={` duration-200 hover:bg-white hover:text-black rounded-2xl lg:p-2 py-3 px-4 ${
-            activeLink === "about" && "bg-white text-black"
+          to="/about"
+          className={` duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 ${
+            activeLink === "/about" && "bg-white text-black"
           }`}
         >
           About
@@ -137,7 +137,6 @@ const Navbar = ({ children }) => {
             <Link
               to="/home"
               className="btn btn-ghost hover:bg-transparent hover:border-transparent hover:shadow-none lg:text-3xl md:text-3xl text-xl lg:mx-0 mx-auto"
-              onClick={() => handleLinkChange("home")}
             >
               <img
                 src={logo}
@@ -146,8 +145,8 @@ const Navbar = ({ children }) => {
               />
             </Link>
           </div>
-          <div className="navbar-center animation hidden lg:flex">
-            <ul className="px-1 menu menu-horizontal text-xl font-bold space-x-3">
+          <div className="navbar-center navbar-animation hidden lg:flex">
+            <ul className="px-1 menu menu-horizontal text-xl font-semibold space-x-3">
               {navOptions}
             </ul>
           </div>

@@ -27,18 +27,12 @@ const Footer = () => {
           <Link className="  hover:text-white">Artist Branding</Link>
         </li>
         <li>
-          <Link
-            onClick={() => handleLinkChange("about")}
-            className="  hover:text-white"
-          >
+          <Link to="/about" className="  hover:text-white">
             About
           </Link>
         </li>
         <li>
-          <Link
-            onClick={() => handleLinkChange("contact")}
-            className="  hover:text-white"
-          >
+          <Link to="/contact-us" className="  hover:text-white">
             Contact
           </Link>
         </li>
@@ -80,7 +74,7 @@ const Footer = () => {
       <ul className="space-y-3.5 text-gray-400 text-lg font-semibold ">
         <li>
           <Link
-            onClick={() => handleLinkChange("services")}
+            onClick={() => handleLinkChange("/services")}
             className="  hover:text-white"
           >
             Music Production
@@ -88,7 +82,7 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            onClick={() => handleLinkChange("services")}
+            onClick={() => handleLinkChange("/services")}
             className="  hover:text-white"
           >
             Mixing & Mastering
@@ -96,7 +90,7 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            onClick={() => handleLinkChange("services")}
+            onClick={() => handleLinkChange("/services")}
             className="  hover:text-white"
           >
             Sound Design

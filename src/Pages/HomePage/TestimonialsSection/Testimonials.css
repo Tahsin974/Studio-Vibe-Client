@@ -1,0 +1,49 @@
+/* Setting responsive Width For Testimonials Section */
+
+.testimonials {
+  max-width: 250px;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 1255px) {
+  .testimonials {
+    max-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 399px) and (min-width: 320px) {
+  .testimonials {
+    max-width: 290px;
+  }
+}
+@media only screen and (max-width: 499px) and (min-width: 400px) {
+  .testimonials {
+    max-width: 350px;
+  }
+}
+@media only screen and (max-width: 639px) and (min-width: 500px) {
+  .testimonials {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 640px) {
+  .testimonials {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 899px) and (min-width: 700px) {
+  .testimonials {
+    max-width: 650px;
+  }
+}
+@media only screen and (max-width: 1019px) and (min-width: 900px) {
+  .testimonials {
+    max-width: 850px;
+  }
+}
+@media only screen and (max-width: 1254px) and (min-width: 1020px) {
+  .testimonials {
+    max-width: 990px;
+  }
+}

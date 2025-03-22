@@ -1,0 +1,73 @@
+/* Adding Responsive Grid LayOut For About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+#service-box-1 {
+  grid-column: 1 / span 3;
+}
+#service-box-2 {
+  position: absolute;
+  left: 0;
+  bottom: -240px;
+}
+#service-box-3 {
+  position: absolute;
+  right: 0;
+  bottom: -128px;
+}
+
+.service-box-container {
+  min-width: 630px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  position: relative;
+  align-items: start;
+}
+
+/* Responsive */
+@media only screen and (min-width: 1255px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 1254px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 100px;
+  }
+  #service-box-2 {
+    position: absolute;
+    left: 0;
+    bottom: -220px;
+  }
+}
+@media only screen and (max-width: 698px) {
+  .service-box-container {
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #service-box-1 {
+    max-width: 18rem;
+  }
+  #service-box-2 {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    max-width: 18rem;
+  }
+  #service-box-3 {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    max-width: 18rem;
+  }
+}

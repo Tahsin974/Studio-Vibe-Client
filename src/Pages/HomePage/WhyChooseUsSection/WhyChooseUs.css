@@ -1,0 +1,15 @@
+/* Setting Responsive Grid Layout For Why Choose Us Section */
+.why-choose {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1020px) {
+  .why-choose {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

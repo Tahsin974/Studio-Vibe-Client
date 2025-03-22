@@ -1,127 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.service-dropdown {
-  display: none;
-}
-.service-dropdown > ul > li {
-  animation: dropdown-slide-up 1.5s ease-in-out forwards;
-}
-
-.service:hover .service-dropdown {
-  display: block;
-  animation: dropdown 1s ease-in-out;
-}
-
-.text-animation {
-  animation: slide-up 2s ease-in-out infinite;
-}
-
-.animation {
-  animation: slide-down 1s ease-in-out;
-}
-.about-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-#service-box-1 {
-  grid-column: 1 / span 3;
-}
-#service-box-2 {
-  position: absolute;
-  left: 0;
-  bottom: -240px;
-}
-#service-box-3 {
-  position: absolute;
-  right: 0;
-  bottom: -128px;
-}
-
-.service-box-container {
-  min-width: 630px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  position: relative;
-  align-items: start;
-}
-
-.testimonials {
-  max-width: 250px;
-}
-
-.why-choose {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  justify-items: center;
-}
-
-.process-card .card-actions > button {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-in-out, visibility 1s linear 1s;
-  animation: btn-hide 1s ease-in-out;
-}
-.process-card:hover figure {
-  background-color: rgb(51, 177, 156);
-}
-.process-card:hover .card-actions > button {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease-in-out;
-  animation: btn-reveal 1s ease-in-out;
-}
-
+/* CSS Style For Every Input Fields */
 input {
   background-color: transparent;
   color: white;
 }
 
+/*Slide Up Text Animation  */
+.text-animation {
+  animation: slide-up 2s ease-in-out infinite;
+}
 /* Animation */
-@keyframes btn-hide {
-  0% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
-@keyframes btn-reveal {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@keyframes slide-down {
-  0% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@keyframes dropdown-slide-up {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
+
 @keyframes slide-up {
   0% {
     transform: translateY(100%);
@@ -130,106 +21,5 @@ input {
   100% {
     transform: translateY(0%);
     opacity: 1;
-  }
-}
-@keyframes dropdown {
-  0% {
-    transform: translateY(0%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 1;
-  }
-}
-
-/* Responsive */
-
-@media only screen and (max-width: 1020px) {
-  .why-choose {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media only screen and (min-width: 1255px) {
-  .testimonials {
-    max-width: 1280px;
-  }
-}
-
-@media only screen and (max-width: 399px) and (min-width: 320px) {
-  .testimonials {
-    max-width: 290px;
-  }
-}
-@media only screen and (max-width: 499px) and (min-width: 400px) {
-  .testimonials {
-    max-width: 350px;
-  }
-}
-@media only screen and (max-width: 639px) and (min-width: 500px) {
-  .testimonials {
-    max-width: 500px;
-  }
-}
-@media only screen and (max-width: 699px) and (min-width: 640px) {
-  .testimonials {
-    max-width: 600px;
-  }
-}
-@media only screen and (max-width: 899px) and (min-width: 700px) {
-  .testimonials {
-    max-width: 650px;
-  }
-}
-@media only screen and (max-width: 1019px) and (min-width: 900px) {
-  .testimonials {
-    max-width: 850px;
-  }
-}
-@media only screen and (max-width: 1254px) and (min-width: 1020px) {
-  .testimonials {
-    max-width: 990px;
-  }
-}
-@media only screen and (min-width: 1255px) {
-  .about-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 1254px) {
-  .about-content {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    gap: 100px;
-  }
-  #service-box-2 {
-    position: absolute;
-    left: 0;
-    bottom: -220px;
-  }
-}
-@media only screen and (max-width: 698px) {
-  .service-box-container {
-    min-width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  #service-box-1 {
-    max-width: 18rem;
-  }
-  #service-box-2 {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    max-width: 18rem;
-  }
-  #service-box-3 {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    max-width: 18rem;
   }
 }

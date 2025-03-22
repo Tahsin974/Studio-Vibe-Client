@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Music Production",
+    "description": "From concept to completion, we craft high-quality music productions that align with your artistic vision. Whether you're a solo artist or a band, our studio provides the tools and expertise to bring your sound to life.",
+    "icon": "fa-music",
+    "badge": null
+  },
+  {
+    "title": "Mixing & Mastering",
+    "description": "Enhance your tracks with professional-grade mixing and mastering. Our engineers ensure your music sounds polished, clear, and ready for streaming, radio, and commercial distribution.",
+    "icon": "fa-sliders-h",
+    "badge": "NEW"
+  },
+  {
+    "title": "Sound Design & Custom Beats",
+    "description": "Get unique soundscapes, effects, and custom-made beats tailored to your style. Whether you need cinematic textures or hard-hitting beats, our sound designers will create something special for you.",
+    "icon": "fa-wave-square",
+    "badge": null
+  },
+  {
+    "title": "Voice Recording & Podcast Production",
+    "description": "Record crystal-clear vocals, voiceovers, or podcasts in our acoustically treated studio. We offer full editing, enhancement, and post-production services to make your voice stand out.",
+    "icon": "fa-microphone",
+    "badge": "EXCLUSIVE"
+  },
+  {
+    "title": "Music Video Production",
+    "description": "Turn your music into a visual masterpiece with our professional video production team. We provide creative direction, filming, and editing for high-quality music videos.",
+    "icon": "fa-video",
+    "badge": null
+  },
+  {
+    "title": "Live Session Recording",
+    "description": "Capture the magic of a live performance with our high-fidelity recording services. Perfect for solo artists, bands, and live sessions, ensuring your performance is preserved with studio-quality sound.",
+    "icon": "fa-broadcast-tower",
+    "badge": "NEW"
+  }
+]

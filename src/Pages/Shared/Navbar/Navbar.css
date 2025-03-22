@@ -1,0 +1,43 @@
+/*Slide Down Animation On Navbar And Creating Dropdown Menu with Animation on hover on service nav */
+
+.navbar-animation {
+  animation: slide-down 1s ease-in-out;
+}
+.service-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+.service-dropdown > ul > li {
+  animation: dropdown-slide-up 1.5s ease-in-out forwards;
+}
+
+.service:hover .service-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/*Navbar Animation */
+@keyframes slide-down {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/* Service Nav Animation */
+
+@keyframes dropdown-slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
