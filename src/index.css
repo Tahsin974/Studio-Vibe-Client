@@ -1,12 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* CSS Style For Every Input Fields */
-input {
-  background-color: transparent;
-  color: white;
-}
-
 /*Slide Up Text Animation  */
 .text-animation {
   animation: slide-up 2s ease-in-out infinite;

@@ -1,7 +1,7 @@
 const Pagetitle = ({ BGimg, subHeading, children }) => {
   return (
     <div
-      className="hero h-[80vh]  w-full bg-center bg-cover object-cover rounded-b-[45%]"
+      className="hero lg:h-[80vh] md:h-[80vh] sm:h-[80vh] h-[70vh]  w-full bg-center bg-cover object-cover rounded-b-[45%]"
       style={{
         backgroundImage: `url(${BGimg})`,
       }}

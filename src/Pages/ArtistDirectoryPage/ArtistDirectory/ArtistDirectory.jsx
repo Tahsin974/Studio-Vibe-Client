@@ -24,7 +24,7 @@ const ArtistDirectory = () => {
     <div className="min-h-screen ">
       <Title>Artist Directory</Title>
       <Pagetitle BGimg={bgimg}>Artist Directory </Pagetitle>
-      <div className=" bg-[#000000] text-white  min-h-screen mb-32 pb-28 pt-10">
+      <div className=" bg-[#000000] text-white  min-h-screen mb-32 pb-28 pt-10 max-w-[1200px] mx-auto">
         <div className=" text-center">
           <div className="mx-auto max-w-4xl ">
             <p className="py-6 lg:text-3xl md:text-3xl sm:text-2xl text-xl font-semibold bg-gradient-to-r from-violet-600 via-violet-400 to-violet-600 bg-clip-text text-transparent">

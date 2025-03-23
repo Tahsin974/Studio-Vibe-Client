@@ -33,7 +33,43 @@ const Navbar = ({ children }) => {
           Home
         </Link>
       </li>
-      <li>
+      <li className="lg:hidden flex">
+        <Link
+          to="/services"
+          className={`duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 service ${
+            activeLink === "/services" && "bg-white text-black"
+          }`}
+        >
+          Services
+        </Link>
+        <ul className="p-2">
+          <li>
+            <Link
+              onClick={() => handleLinkChange("/services")}
+              className="font-light hover:text-green-300"
+            >
+              Music Production
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => handleLinkChange("/services")}
+              className="font-light hover:text-green-300"
+            >
+              Mixing & Mastering
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => handleLinkChange("/services")}
+              className="font-light hover:text-green-300"
+            >
+              Sound Design
+            </Link>
+          </li>
+        </ul>
+      </li>
+      <li className="lg:flex hidden">
         <Link
           to="/services"
           className={`duration-200 hover:bg-white hover:text-black rounded-lg lg:px-3 lg:py-2 py-3 px-4 service ${
@@ -163,7 +199,7 @@ const Navbar = ({ children }) => {
                     />
                   </div>
                 </summary>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 lg:w-60 md:w-60 p-2 shadow-sm text-black">
+                <ul className="menu dropdown-content bg-white rounded-box z-1 lg:w-60 md:w-60 p-2 shadow-sm text-black">
                   <li>
                     <a className="justify-between">
                       Profile

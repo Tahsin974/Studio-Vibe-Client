@@ -7,11 +7,11 @@ const ServiceCard = ({ service, index }) => {
   const color = COLORS[index % COLORS.length];
   console.log(color);
   return (
-    <div className="card max-w-96 card-animation card-xl  bg-[#060910]  shadow-2xl hover:shadow-slate-800 hover:bg-[#000000]  p-2 group">
+    <div className="card max-w-96 card-animation card-xl h-[520px] bg-[#060910]  shadow-2xl hover:shadow-slate-800 hover:bg-[#000000]  p-2 group">
       <div className="card-body space-y-2">
         <div className="flex items-center justify-between">
           <h1
-            className="text-6xl transition  duration-500 ease-in-out group-hover:-translate-y-3 group-hover:scale-110 "
+            className="text-6xl transition  duration-500 ease-in-out group-hover:-translate-y-5 group-hover:scale-110 "
             style={{
               color: color,
             }}
@@ -24,10 +24,10 @@ const ServiceCard = ({ service, index }) => {
             <></>
           )}
         </div>
-        <h2 className="card-title text-3xl transition  duration-500 delay-150 ease-in-out group-hover:-translate-y-2 group-hover:scale-105">
+        <h2 className="card-title text-3xl transition  duration-500 delay-150 ease-in-out group-hover:-translate-y-4 group-hover:scale-105">
           {title}
         </h2>
-        <p className="text-base/6 transition delay-300 duration-500 ease-in-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:text-[#0a1d58] ">
+        <p className="text-base/6 transition delay-300 duration-500 ease-in-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:text-[#0a1d58] ">
           {description}
         </p>
         <div className="justify-center mt-5 card-actions">

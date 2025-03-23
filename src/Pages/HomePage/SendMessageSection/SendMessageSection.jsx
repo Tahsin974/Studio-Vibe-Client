@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const SendMessageSection = () => {
   const [index, setIndex] = useState(0);
@@ -29,9 +30,11 @@ const SendMessageSection = () => {
             </span>
           </div>
           <div className=" border-b border-2 border-white mx-4 w-40"></div>
-          <button className="btn btn-lg xl:btn-xl btn-ghost  hover:bg-transparent hover:border-transparent hover:shadow-none text-fuchsia-50 font-bold text-6xl uppercase">
-            send message
-          </button>
+          <Link to="/contact-us">
+            <button className="btn btn-lg xl:btn-xl btn-ghost  hover:bg-transparent hover:border-transparent hover:shadow-none text-fuchsia-50 font-bold text-6xl uppercase">
+              send message
+            </button>
+          </Link>
         </div>
       </div>
     </div>

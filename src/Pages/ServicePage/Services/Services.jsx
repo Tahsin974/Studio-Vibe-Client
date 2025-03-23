@@ -15,8 +15,8 @@ const Services = () => {
     axios.get("services.json").then((res) => setServices(res.data));
   }, []);
   return (
-    <div className=" bg-transparent text-white min-h-screen py-10 mt-10 mb-28">
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-4 py-6 justify-items-center p-5">
+    <div className=" bg-transparent text-white min-h-screen py-10 mt-10 mb-28 max-w-[1200px] mx-auto">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-4 py-6 justify-items-center ">
         {services.map((service, index) => (
           <div
             key={index}

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import useAuthContext from "../../../Context/useAuthContext";
 import { FcGoogle } from "react-icons/fc";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   const { GoogleSignIn, setUser } = useAuthContext();
@@ -20,7 +21,7 @@ const LoginForm = () => {
         <label className="fieldset-label text-gray-400">Email</label>
         <input
           type="email"
-          className="input w-full"
+          className="input login-input  w-full"
           placeholder="Enter Email"
         />
       </div>
@@ -29,7 +30,7 @@ const LoginForm = () => {
         <label className="fieldset-label text-gray-400">Password</label>
         <input
           type="password"
-          className="input  w-full"
+          className="input login-input   w-full"
           placeholder="Enter Password"
         />
       </div>
