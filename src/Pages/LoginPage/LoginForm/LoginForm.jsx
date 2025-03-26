@@ -35,7 +35,9 @@ const LoginForm = () => {
         />
       </div>
 
-      <button className="btn btn-neutral mt-4">Login</button>
+      <button className="btn btn-neutral mt-4 shadow-xs shadow-white">
+        Login
+      </button>
       <div className="divider before:bg-white after:bg-white ">OR</div>
       <button
         onClick={handleGoogleSignIn}

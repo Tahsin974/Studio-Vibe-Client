@@ -194,6 +194,7 @@ const Navbar = ({ children }) => {
                     <img
                       alt="Tailwind CSS Navbar component"
                       src={
+                        user?.photoURL ||
                         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                       }
                     />
@@ -201,10 +202,7 @@ const Navbar = ({ children }) => {
                 </summary>
                 <ul className="menu dropdown-content bg-white rounded-box z-1 lg:w-60 md:w-60 p-2 shadow-sm text-black">
                   <li>
-                    <a className="justify-between">
-                      Profile
-                      <span className="badge">New</span>
-                    </a>
+                    <a className="justify-between">Profile</a>
                   </li>
                   <li>
                     <a>Settings</a>

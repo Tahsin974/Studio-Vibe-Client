@@ -5,11 +5,17 @@ const EmpowermentSection = () => {
       <div className="hero bg-transparent text-white min-h-screen">
         <div className="hero-content flex-col lg:flex-row gap-10">
           <figure className="shadow-lg shadow-gray-400 rounded-lg">
-            <img src={img} className="lg:max-w-md rounded-lg " />
+            <img src={img} className="lg:max-w-md rounded-lg hover:grayscale" />
           </figure>
           <div>
-            <h1 className="lg:text-5xl md:text-5xl text-4xl font-bold">
-              Empowering 🎸 Independent Music
+            <h1 className="lg:text-5xl md:text-5xl text-4xl font-bold ">
+              <span className="bg-gradient-to-r from-violet-400 via-cyan-300 to-violet-700 bg-clip-text text-transparent">
+                Empowering
+              </span>{" "}
+              🎸{" "}
+              <span className="bg-gradient-to-r from-violet-400 via-cyan-300 to-violet-700 bg-clip-text text-transparent">
+                Independent Music
+              </span>
             </h1>
             <p className="py-6 lg:text-xl md:text-xl text-lg">
               Studio Vibe is the first digital music distribution company in
