@@ -8,8 +8,8 @@
   visibility: hidden;
   transition: opacity 1s ease-in-out;
 }
-.service-dropdown > ul > li {
-  animation: dropdown-slide-up 1.5s ease-in-out forwards;
+.service:hover .service-dropdown > ul > li {
+  animation: dropdown-slide-up 1s ease-in-out;
 }
 
 .service:hover .service-dropdown {

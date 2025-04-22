@@ -1,8 +1,8 @@
 const Pagetitle = ({ BGimg, subHeading, children }) => {
   return (
-    <div>
+    <div className="relative">
       <div
-        className=" hero lg:h-[80vh] md:h-[80vh] sm:h-[80vh] h-[70vh]  w-full bg-center bg-cover object-cover rounded-b-[50%] "
+        className=" hero lg:h-[400px] md:h-[400px] sm:h-[400px] h-[300px]  w-full bg-center bg-cover object-cover "
         style={{
           backgroundImage: `url(${BGimg})`,
         }}
@@ -10,7 +10,7 @@ const Pagetitle = ({ BGimg, subHeading, children }) => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content ">
           <div>
-            <h1 className="mb-5 lg:mt-32 md:mt-28 mt-20 lg:text-7xl md:text-5xl sm:text-4xl text-2xl font-bold ">
+            <h1 className="mb-5  lg:text-7xl md:text-5xl sm:text-4xl text-2xl font-bold ">
               {children}
             </h1>
             <p className="lg:text-xl md:text-xl sm:text-lg text-base font-semibold">
@@ -18,6 +18,18 @@ const Pagetitle = ({ BGimg, subHeading, children }) => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+        <svg
+          className="block w-full h-[100px]"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z"
+            fill="black"
+          ></path>
+        </svg>
       </div>
     </div>
   );

@@ -45,6 +45,7 @@ const Navbar = ({ children }) => {
         <ul className="p-2">
           <li>
             <Link
+              to="/music-production"
               onClick={() => handleLinkChange("/services")}
               className="font-light hover:text-green-300"
             >
@@ -81,6 +82,7 @@ const Navbar = ({ children }) => {
             <ul className=" flex-col  mt-12  rounded-lg  bg-black/75 py-10 px-3 w-56 text-white">
               <li>
                 <Link
+                  to="/music-production"
                   onClick={() => handleLinkChange("/services")}
                   className="font-light hover:text-green-300"
                 >

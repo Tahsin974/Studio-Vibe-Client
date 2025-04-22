@@ -6,6 +6,7 @@ import ServicePage from "../Pages/ServicePage/ServicePage/ServicePage";
 import AboutPage from "../Pages/AboutPage/AboutPage/AboutPage";
 import LoginPage from "../Pages/LoginPage/LoginPage/LoginPage";
 import HomePage from "../Pages/HomePage/HomePage/HomePage";
+import MusicProduction from "../Pages/MusicProduction/MusicProduction/MusicProduction";
 
 const ReactRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const ReactRoutes = () => {
           <Route path="home" element={<HomePage />} />
           <Route path="artist-directory" element={<ArtistDirectory />} />
           <Route path="services" element={<ServicePage />} />
+          <Route path="music-production" element={<MusicProduction />} />
           <Route path="contact-us" element={<ContactUsPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="login" element={<LoginPage />} />
